@@ -26,6 +26,7 @@ gem 'bootstrap-sass'
 gem 'quiet_assets'
 gem 'simple_form'
 gem 'devise'
+gem 'ng-rails-csrf'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end

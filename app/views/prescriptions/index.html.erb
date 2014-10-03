@@ -1,0 +1,85 @@
+<div class="container" ng-app="app">
+	<div class="row" ng-controller="prescriptionsCtrl"  >
+		<div class="col-md-12" >
+
+			<h1>Manage Prescriptions</h1>
+			<%= current_user.id %>
+			{{1+1}}
+			<table class="table  table-hover">
+				<thead>
+					<tr>
+						<th>Right(OD) Sphere</th>
+						<th>Right(OD) Cylinder</th>
+						<th>Right(OD) Axis</th>
+						<th>Left(OS) Sphere</th>
+						<th>Left(OS) Cylinder</th>
+						<th>Left(OS) Axis</th>
+						<th>Action</th>
+					</tr>
+					<tr>
+						<th>
+						<form class="form-horizontal" role="form">
+							
+							<div class="form-group">
+								<label class="sr-only" for="od_sph"></label>
+								<input ng-model="newScript.od_sph" type="number" min="-10.0" max="10.0" step=".25"  class="form-control" placeholder="OD SPH">
+							</div>
+						</th>
+						<th>
+						<div class="form-group">
+							<label class="sr-only" for="od_cyl"></label>
+							<input ng-model="newScript.od_cyl" type="number" min="-10.0" max="10.0" step=".25"  class="form-control" placeholder="OD SPH">
+						</div></th>
+						<th>
+						<div class="form-group">
+							<label class="sr-only" for="od_axis"></label>
+							<input ng-model="newScript.od_axis" type="number"min="0" max="180" class="form-control" placeholder="OD SPH">
+						</div></th>
+						<th>
+						<div class="form-group">
+							<label class="sr-only" for="os_sph"></label>
+							<input ng-model="newScript.os_sph" type="number" min="-10.0" max="10.0" step=".25"  class="form-control" placeholder="OD SPH">
+						</div></th>
+						<th>
+						<div class="form-group">
+							<label class="sr-only" for="os_cyl"></label>
+							<input ng-model="newScript.os_cyl" type="number" min="-10.0" max="10.0" step=".25" class="form-control" placeholder="OD SPH">
+						</div></th>
+						<th>
+						<div class="form-group">
+							<label class="sr-only" for="od_axis"></label>
+							<input ng-model="newScript.os_axis" type="number" min="0" max="180"  class="form-control" placeholder="OD SPH">
+						</div></th>
+						<th>
+						<div class="form-group">
+							<button type="submit" class="btn btn-default" ng-click="sendData()">
+								Save
+							</button>
+						</div></th>
+						</form>
+					</tr>
+				</thead>
+				<tbody>
+					<tr >
+						<td>{{newScript.od_sph}}</th> <td>{{newScript.od_cyl}}</th> <td>{{newScript.od_axis}}</th> <td>{{newScript.os_sph}}</th> <td>{{newScript.os_cyl}}</th> <td>{{newScript.os_axis}}</th> <td>
+						<div class="form-group">
+							<button type="submit" class="btn btn-warning">
+								Delete
+							</button>
+						</div></th>
+					</tr>
+					<tr ng-repeat="script in scripts">
+						<td>{{script.od_sph}}</th> <td>{{script.od_cyl}}</th> <td>{{script.od_axis}}</th> <td>{{script.os_sph}}</th> <td>{{script.os_cyl}}</th> <td>{{script.os_axis}}</th> <td>
+						<div class="form-group">
+							<button type="submit" class="btn btn-warning">
+								Delete
+							</button>
+						</div></th>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+</div>
+</div>

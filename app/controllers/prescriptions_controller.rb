@@ -1,2 +1,5 @@
 class PrescriptionsController < ApplicationController
-end
+  def index
+    
+  end
+ end

@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003005208) do
+ActiveRecord::Schema.define(version: 20141003040111) do
+
+  create_table "prescriptions", force: true do |t|
+    t.integer  "user_id"
+    t.decimal  "od_sph"
+    t.decimal  "od_cyl"
+    t.decimal  "od_axis"
+    t.decimal  "os_sph"
+    t.decimal  "os_cyl"
+    t.decimal  "os_axis"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

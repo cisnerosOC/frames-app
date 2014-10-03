@@ -9,7 +9,12 @@ Rails.application.routes.draw do
      root 'devise/registrations#new', as: :unauthenticated_root
    end
  end
- resources :presciptions
+ namespace :api do 
+  namespace :v1 do 
+    resources :prescriptions
+  end
+end
+ resources :prescriptions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
