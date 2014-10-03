@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',                              group: :doc
 gem 'tzinfo-data'
 gem 'bootstrap-sass'
+gem 'quiet_assets'
+gem 'simple_form'
+gem 'devise'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
